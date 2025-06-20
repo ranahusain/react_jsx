@@ -1,8 +1,10 @@
+const name = "Hussain";
 function App() {
   return (
     <>
       <div className="text-5xl">Tailwind is working!</div>
-      <p>Hello World</p>
+      <p>Hello!</p>
+      <p>My name is {name}</p>
     </>
   );
 }
