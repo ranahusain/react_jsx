@@ -1,85 +1,14 @@
-## What I Did?
+# Setup JSON server
 
-In this file two folders are worth visiting one is components where we created our two components and the other is App.jsx where we called the componenst
-
-## Remember
-
-=======
-
-## What I Did?
-
-In this file two folders are worth visiting one is components where we created our two components and the other is App.jsx where we called the componenst
-
-## Remember
-
-Use the Extension ES7+ React....
-
-|not forget to use RAFCE (will setup a component)
-
-|not forget to import in App.jsx
-
-##Props
-
-the above is use of the default objects (Props)
-
-below is the use of objects by destructuring (Desturcturing Props)
-
-below is the use of default of properties of objects (Default Prop)
-
-### 1. yarn add react-router-dom
-
-### Go to App.jsx
+1. yarn add -D json-server
+2. go to package.json and add the line in scripts => server: "json-server --watch src/jobs.json --port 8000"
+   "scripts": {
+   "dev": "vite",
+   "build": "vite build",
+   "lint": "eslint .",
+   "preview": "vite preview",
+   "server": "json-server --watch src/jobs.json --port 8000"
+   },
+3. yarn server
 
 ---
-
-import {
-Route,
-createBrowserRouter,
-createRoutesFromElements,
-Router,
-} from "react-router-dom";
-
----
-
-### Create a folder Pages in src
-
-Create Homepage file in pages import the components needed for that page
-
-### Make sure that App.jsx has complete router setup
-
-import {
-Route,
-createBrowserRouter,
-createRoutesFromElements,
-Router,
-RouterProvider,
-} from "react-router-dom";
-import HomePage from "./pages/HomePage";
-
-const router = createBrowserRouter(
-createRoutesFromElements(<Route index element={<HomePage />} />)
-);
-
-const App = () => {
-return (
-<>
-<RouterProvider router={router} />
-</>
-);
-};
-
-export default App;
-
----
-
-if want to show a single component on every page do
-
-1. create a folder layout
-2. create a file as in layout/mainlayout
-3. import {outlet} from "react-router-dom"
-4. create a parent router in App.jsx
-
-# Change the links to avoid that little refresh
-
-1. import {Link} from "react-router-dom"
-2. a => Link and href => to
