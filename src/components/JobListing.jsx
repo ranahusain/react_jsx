@@ -11,6 +11,7 @@ const JobListing = () => {
             Browse Jobs
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* here we used the map function  */}
             {jobs.map((job) => (
               <div className="bg-white rounded-xl shadow-md relative">
                 <div className="p-4">
