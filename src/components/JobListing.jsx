@@ -1,5 +1,7 @@
 import jobs from "../jobs.json";
 import SingleJobList from "./SingleJobList";
+import { Link } from "react-router-dom";
+
 const JobListing = () => {
   // console.log(jobs);
   const recentjobs = jobs.slice(0, 3);
