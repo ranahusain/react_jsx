@@ -43,3 +43,10 @@ return (
 export default App;
 
 ---
+
+if want to show a single component on every page do
+
+1. create a folder layout
+2. create a file as in layout/mainlayout
+3. import {outlet} from "react-router-dom"
+4. create a parent router in App.jsx
