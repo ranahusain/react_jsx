@@ -1,3 +1,5 @@
+# Methond add in APP.jsx and see AddJobPage.jsx
+
 # Setup a proxy
 
 1. go to vite.config.js
