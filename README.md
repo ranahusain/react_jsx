@@ -3,20 +3,22 @@
 1. go to vite.config.js
 2. add the below code from server
 
-import { defineConfig } from "vite";
+{
 
-import react from "@vitejs/plugin-react";
+    import { defineConfig } from "vite";
 
-import tailwindcss from "@tailwindcss/vite";
+    import react from "@vitejs/plugin-react";
 
-// https://vite.dev/config/
+    import tailwindcss from "@tailwindcss/vite";
 
-export default defineConfig({
+    // https://vite.dev/config/
 
-  plugins: [react(), tailwindcss()],
+    export default defineConfig({
+
+    plugins: [react(), tailwindcss()],
   
-  server: {
-  
+    server: {
+
     proxy: {
     
       "/api": {
@@ -31,9 +33,9 @@ export default defineConfig({
       
     },
     
-  },
+    },
   
-});
+    });
 
 
 3. change the url in file
