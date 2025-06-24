@@ -83,20 +83,6 @@
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }
-    },
-    {
-      "id": "f391",
-      "title": "Job Name",
-      "type": "Full-time",
-      "location": "Lahore",
-      "description": "This is the Description",
-      "salary": "Under $50K",
-      "company": {
-        "name": "Cbsol",
-        "description": "Software House",
-        "contactEmail": "cbsol@gmail.com",
-        "contactPhone": "111-128-128"
-      }
     }
   ]
 }
