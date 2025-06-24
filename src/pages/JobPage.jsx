@@ -28,6 +28,7 @@
 import { useParams, useLoaderData } from "react-router-dom";
 import { FaArrowLeft, FaMapMarker } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 import { Link } from "react-router-dom";
 const JobPage = ({ deleteJob }) => {
@@ -40,6 +41,7 @@ const JobPage = ({ deleteJob }) => {
     const confirm = window.confirm("Are you sure ?");
     if (!confirm) return;
     deleteJob(jobID);
+    toast.success("Job deleted successfully");
     navigate("/jobs");
   };
 
@@ -121,7 +123,7 @@ const JobPage = ({ deleteJob }) => {
                 </Link>
                 <button
                   onClick={() => onDeleteClick(job.id)}
-                  className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block"
+                  className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block cursor-pointer"
                 >
                   Delete Job
                 </button>
