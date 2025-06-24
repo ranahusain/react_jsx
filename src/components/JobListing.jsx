@@ -15,8 +15,11 @@ const JobListing = ({ isHome = false }) => {
 
   useEffect(() => {
     const fetchjobs = async () => {
+      const apiUrl = isHome
+        ? "http://localhost:8000/jobs?_limit=3"
+        : "http://localhost:8000/jobs";
       try {
-        const res = await fetch("http://localhost:8000/jobs?_limit=3");
+        const res = await fetch(apiUrl);
         const data = await res.json();
         setJobs(data);
       } catch (error) {
@@ -76,3 +79,22 @@ const JobListing = ({ isHome = false }) => {
 };
 
 export default JobListing;
+
+// import { useState, useEffect } from "react";
+// const [jobs, setJobs] = useState([]);
+// const [loading, setLoading] = useState(true);
+//original function to fetch data from API
+//  useEffect(() => {
+//     const fetchjobs = async () => {
+//       try {
+//         const res = await fetch("http://localhost:8000/jobs");
+//         const data = await res.json();
+//         setJobs(data);
+//       } catch (error) {
+//         console.log("error fetching data", error);
+//       } finally {
+//         setLoading(false);
+//       }
+//     };
+//     fetchjobs();
+//   }, []);
